@@ -1,0 +1,127 @@
+@use '../abstracts';
+
+.dropdown {
+    position: absolute;
+    left: 0;
+    padding-top: 5.4rem;
+    display: none;
+    width: min(124rem, 100%);
+    &__inner {
+        --inner-padding: 3rem;
+        position: relative;
+        padding: var(--inner-padding);
+        border-radius: 2rem;
+        background: var(--dropdown-bg-color);
+        box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
+
+        &::before {
+            content: url("../icons/dropdown-arrow.svg");
+            position: absolute;
+            top: -12px;
+            left: var(--arrow-left-pos);
+            translate: -50%;
+            filter: var(--dropdown-arrow-color);
+        }
+    }
+}
+
+.top-menu {
+    --top-menu-main-width: 29.2rem;
+    --max-inner-height: calc(min(58.2rem, 100vh - 15.8rem) - var(--inner-padding) * 2);
+    position: relative;
+    &__main {
+        width: var(--top-menu-main-width);
+        height:var(--max-inner-height) ;
+        border-right: 1px solid var(--top-menu-border-color);
+        overflow-y: auto;
+    }
+}
+
+.menu-column {
+
+    + .menu-column {
+        margin-top: 2.2rem;
+    }
+    display: flex;
+    gap: 1.4rem;
+    &__icon {
+        position: relative;
+        flex-shrink: 0;
+        width: 3.6rem;
+        height: 3.6rem;
+
+        @include abstracts.breakpoint(xl) {
+            display: none;
+        }
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__icon-1 {
+        object-fit: contain;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    &__icon-2 {
+        position: absolute;
+        bottom: 0.2rem;
+        right: 0.1rem;
+        object-fit: contain;
+        width: 1.8rem;
+        height: 1.8rem;
+        filter: var(--menu-column-icon-color);
+    }
+
+    &__heading {
+        margin-top: 0.6rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    &__list {
+        margin-top: 1.3rem;
+    }
+
+    &__item {
+        &--active .sub-menu {
+            display: grid;
+        }
+    }
+
+    &__item--active > &__link,
+    &__item:hover > &__link {
+        color: var(--menu-column-link-hover-color);
+        font-weight: 500;
+    }
+
+    &__link {
+        display: block;
+        padding: 0.7rem 0;
+        font-size: 1.4rem;
+        line-height: 142.857%;
+    }
+}
+
+.sub-menu {
+    position: absolute;
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    inset: 0 0 0 var(--top-menu-main-width);    
+    padding-left: var(--inner-padding);
+    overflow-y: auto;
+
+    &--not-main {
+        position: initial;
+        inset: initial;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 7.7rem;
+        height:var(--max-inner-height) ;
+        padding-left: 0;
+    }
+}

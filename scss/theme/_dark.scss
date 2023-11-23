@@ -1,3 +1,5 @@
+@use '../abstracts';
+
 html.dark {
     --text-color: #fff;
     --icon-color: brightness(0) saturate(100%) invert(99%) sepia(3%) 
@@ -5,7 +7,21 @@ html.dark {
 
     --body-bg-color: #292E39;
     --header-bg-color: #171C28;
+    @include abstracts.breakpoint(lg) {
+        --header-shadow-color: rgba(0, 0, 0, 0.20);
+    }
     --top-act-group-bg-color: #292E39;
     --top-act-group-shadow: rgba(0, 0, 0, 0.20);
     --top-act-group-separate: #ededf6;
+
+    // Dropdown
+    --dropdown-bg-color: #3f4553;
+    --dropdown-shadow-color:rgba(23, 28, 40, 0.40);
+    --dropdown-arrow-color:  brightness(0) saturate(100%) invert(23%) sepia(3%) saturate(4218%) hue-rotate(184deg) brightness(89%) contrast(79%);
+
+    --top-menu-border-color: #171C28;
+
+    --menu-column-link-hover-color: #0071DC;
+
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(99%) sepia(35%) saturate(778%) hue-rotate(205deg) brightness(104%) contrast(96%);
 }

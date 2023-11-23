@@ -7,9 +7,14 @@
 
 .header {
     background: var(--header-bg-color);
+
+    @include abstracts.breakpoint(lg) {
+        box-shadow: 0px 20px 60px 10px var(--header-shadow-color);
+    }
 }
 
 .top-bar {
+    position: relative;
     @extend %flexItemsCenter;
     padding: 3rem 0;
 
@@ -17,7 +22,7 @@
         padding: 2rem 0;
     }
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoint(md) {
         padding: 1.6rem;
         justify-content: space-between;
     }
@@ -32,11 +37,11 @@
 }
 
 .navbar {
-    margin-left: 14.4rem;
+    margin-left: 12.9rem;
    
 
     @include abstracts.breakpoint(xl) {
-        margin-left: 5rem;
+        margin-left: 2.5rem;
     }
 
     @include abstracts.breakpoint(lg) {
@@ -45,11 +50,18 @@
 
     &__list {
         @extend %flexItemsCenter;
-        gap: 3rem;
+    }
+
+    &__item {
+        &:hover .dropdown {
+            display: block;
+        }
     }
 
     &__link {
         @extend %flexItemsCenter;
+        height: 5rem;
+        padding: 0 15px;
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
@@ -66,7 +78,7 @@
     gap: 2rem;
     margin-left: auto;
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoint(md) {
         margin-left: 0;
     }
 
