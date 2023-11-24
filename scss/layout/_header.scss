@@ -26,50 +26,137 @@
         padding: 1.6rem;
         justify-content: space-between;
     }
-
-    &__more {
-        display: none;
-
-        @include abstracts.breakpoint(lg) {
-            display: block;
-        }
-    }
 }
 
 .navbar {
     margin-left: 12.9rem;
-   
 
     @include abstracts.breakpoint(xl) {
         margin-left: 2.5rem;
     }
 
     @include abstracts.breakpoint(lg) {
-        display: none;
+        position: fixed;
+        z-index: 10;
+        inset: 0 50% 0 0;
+        background: var(--sidebar-bg-color);
+        border-radius: 0rem 2rem 2rem 0rem;
+        
+        margin-left: 0;
+        padding: 2rem 0;
+        translate: -100%;
+        transition: translate 0.5s;
+
+        &.show {
+            translate: 0;
+            box-shadow: 0px 40px 90px 20px var(--sidebar-shadow-color)
+        }
+
+        &.show ~ &__overlay {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    @include abstracts.breakpoint(sm) { 
+        inset: 0 12% 0 0;
+    }
+
+    &__close-btn {
+        @include abstracts.breakpoint(lg) {
+            padding: 1rem 4rem;
+        }
+
+        @include abstracts.breakpoint(sm) { 
+           padding: 0 2rem 1rem;
+        }
+    }
+
+    &__overlay {
+        visibility: hidden;
+        opacity: 0;
+
+        @include abstracts.breakpoint(lg) {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            transition: opacity, visibility;
+            transition-duration: 0.5s;
+            background: rgba($color: #1b1b1b, $alpha: 0.3);
+        }
     }
 
     &__list {
         @extend %flexItemsCenter;
+
+        @include abstracts.breakpoint(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+            overflow-y: auto;
+            overflow-behavior: contain;
+            height: calc(100% - 4rem);
+        }
+
+        @include abstracts.breakpoint(md) {
+            height: calc(100% - 14rem);
+        }
+
+        @include abstracts.breakpoint(sm) {
+            height: calc(100% - 12rem);
+        }
     }
 
     &__item {
         &:hover .dropdown {
             display: block;
         }
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            &:hover .dropdown {
+                display: none;
+            }
+
+            &--active .dropdown {
+                display: block !important;
+            }
+        }
     }
 
     &__link {
         @extend %flexItemsCenter;
         height: 5rem;
-        padding: 0 15px;
+        padding: 0 1.5rem;
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+
+        @include abstracts.breakpoint(lg) {
+            padding: 0 4rem;
+            font-size: 1.6rem;
+            line-height: 150%;
+            justify-content: space-between;
+        }
+
+        @include abstracts.breakpoint(sm) { 
+            padding: 0 2rem;
+            height: 4.4rem;
+        }
+
     }
 
     &__arrow-down {
         margin-top: 0.3rem;
         margin-left: 0.6rem;
+
+        @include abstracts.breakpoint(lg) {
+            rotate: -90deg;
+            transition: rotate 0.5s;
+        }
+    }
+
+    &__item--active &__arrow-down {
+        rotate: 0deg;
     }
 }
 
@@ -89,15 +176,6 @@
         border-radius: 0.8rem;
         background: var(--top-act-group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
-        @include abstracts.breakpoint(md) {
-            display: none;
-        }
-    }
-
-    &__group--alone {
-        @include abstracts.breakpoint(lg) {
-            display: none;
-        }
     }
 
     &__group--alone &__btn {
@@ -122,12 +200,33 @@
         background: var(--top-act-group-separate);
     }
 
-
     &__avatar {
         display: block;
         width: 5rem;
         height: 5rem;
         border-radius: 0.8rem;
         cursor: pointer;
+    }
+}
+
+.nav-btn {
+    padding: 0 4rem;
+    align-items: center;
+    height: 5rem;
+    
+    @include abstracts.breakpoint(sm) { 
+        padding: 0rem 2rem;
+        height: 4.4rem;
+     }
+
+    &__title, &__qnt {
+        margin-left: 1.6rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+
+    &__qnt {
+        margin-left: auto;
     }
 }

@@ -6,6 +6,11 @@
     padding-top: 5.4rem;
     display: none;
     width: min(124rem, 100%);
+    @include abstracts.breakpoint(lg) {
+        position: initial;
+        padding-top: 0;
+
+    }
     &__inner {
         --inner-padding: 3rem;
         position: relative;
@@ -13,7 +18,7 @@
         border-radius: 2rem;
         background: var(--dropdown-bg-color);
         box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
-
+       
         &::before {
             content: url("../icons/dropdown-arrow.svg");
             position: absolute;
@@ -21,6 +26,21 @@
             left: var(--arrow-left-pos);
             translate: -50%;
             filter: var(--dropdown-arrow-color);
+        }
+        
+        @include abstracts.breakpoint(lg) {
+            border-radius: 0;
+            background: transparent;
+            box-shadow: none;
+            padding: 0 4rem;
+
+            &::before {
+                content: none;
+            }
+        }
+
+        @include abstracts.breakpoint(sm) {
+            padding: 0 2rem;
         }
     }
 }
@@ -34,6 +54,12 @@
         height:var(--max-inner-height) ;
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            height: auto;
+            border-right: none ;
+        }
     }
 }
 
@@ -52,6 +78,10 @@
 
         @include abstracts.breakpoint(xl) {
             display: none;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            display: block;
         }
     }
 
@@ -80,10 +110,18 @@
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 150%;
+
+        @include abstracts.breakpoint(lg) {
+            margin-bottom: 2.6rem;
+        }
     }
 
     &__list {
         margin-top: 1.3rem;
+
+        @include abstracts.breakpoint(lg) {
+            margin-top: 0;
+        }
     }
 
     &__item {
@@ -115,6 +153,13 @@
     padding-left: var(--inner-padding);
     overflow-y: auto;
 
+    @include abstracts.breakpoint(lg) {
+        position: initial;
+        grid-template-columns: 1fr;
+        padding-left: 0;
+        margin-top: 0.7rem;
+    }
+
     &--not-main {
         position: initial;
         inset: initial;
@@ -123,5 +168,11 @@
         gap: 7.7rem;
         height:var(--max-inner-height) ;
         padding-left: 0;
+
+        @include abstracts.breakpoint(lg) {
+            grid-template-columns: 1fr;
+            height: auto;
+            gap: 3rem;
+        }
     }
 }
