@@ -17,6 +17,7 @@
     position: relative;
     @extend %flexItemsCenter;
     padding: 3rem 0;
+    z-index: 10;
 
     @include abstracts.breakpoint(lg) {
         padding: 2rem 0;
