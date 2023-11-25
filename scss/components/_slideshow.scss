@@ -4,7 +4,7 @@
     position: relative;
     margin: 4rem 0;
 
-    @include abstracts.breakpoint(md) {
+    @include abstracts.screen(md) {
         margin: 3rem 0;
     }
 
@@ -19,7 +19,7 @@
         flex-shrink: 0;
         padding-top: 34%;
 
-        @include abstracts.breakpoint(md) {
+        @include abstracts.screen(md) {
             padding-top: 50%;
         }
     }
@@ -43,7 +43,7 @@
         left: 5.3%;
         width: 17.8%;
 
-        @include abstracts.breakpoint(md) {
+        @include abstracts.screen(md) {
             width: 32%;
         }
     }
@@ -54,7 +54,7 @@
         line-height: 144.444%;
         color: var(--color);
 
-        @include abstracts.breakpoint(md) {
+        @include abstracts.screen(md) {
             font-size: 1.4rem;
             line-height: 142.857%;
         }
@@ -78,7 +78,7 @@
             border: 0.4rem solid var(--color);
             border-radius: 50%;
 
-            @include abstracts.breakpoint(md) {
+            @include abstracts.screen(md) {
                 border-width: 0.3rem;
             }
         }

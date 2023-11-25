@@ -7,7 +7,7 @@ html.dark {
 
     --body-bg-color: #292E39;
     --header-bg-color: #171C28;
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.20);
     }
     --top-act-group-bg-color: #292E39;
