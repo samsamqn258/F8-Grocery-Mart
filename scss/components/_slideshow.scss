@@ -2,11 +2,6 @@
 
 .slideshow {
     position: relative;
-    margin: 4rem 0;
-
-    @include abstracts.screen(md) {
-        margin: 3rem 0;
-    }
 
     &__inner {
         display: flex;

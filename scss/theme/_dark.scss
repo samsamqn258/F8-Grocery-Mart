@@ -28,4 +28,21 @@ html.dark {
      // Sidebar 
      --sidebar-bg-color: #292E39;
      --sidebar-shadow-color: rgba(23, 28, 40, 0.40);
+
+     // Cate-Items
+    --cate-item-bg: #171C28;
+    --cate-item-thumb-bg: #292e39;
+    --cate-item-title-color: #fff;
+
+    @include abstracts.screen(md) {
+        --cate-item-bg: #171C28;
+    }
+
+      // Buttons 
+      --filter-btn-bg: #171C28;
+      --filter-btn-title-color: #fff;
+      --like-btn-bg-color:#292e39;
+      // Product Card
+      --product-card-bg: #171C28;
+      --product-card-shadow-color: rgba(0, 0, 0, 0.20);
 }
