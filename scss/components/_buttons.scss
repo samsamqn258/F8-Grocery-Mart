@@ -40,3 +40,46 @@
         display: none;
     }
 }
+
+//  Buttons
+.btn {
+    border-radius: 0.6rem;
+    background: #f8f8fb;
+    padding: 0 2rem;
+    height: 4.6rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    & + .btn {
+        margin-left: 2rem;
+    }
+
+    &--text {
+        background: transparent;
+        color: #9E9DA8;
+        font-weight: 400;
+    }
+
+    &--primary {
+        color: #1A162E;
+        background: #FFB700;
+    }
+
+    &--outline {
+        background: transparent;
+        border: 0.1rem solid #D2D1D6;
+    }
+
+    &--rounded {
+        border-radius: 9.9rem;
+    }
+    &[disable],
+    &--disable {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
