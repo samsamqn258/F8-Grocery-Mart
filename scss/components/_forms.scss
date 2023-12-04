@@ -1,0 +1,148 @@
+@use '../abstracts';
+
+$color-error:#ed4337;
+.form {
+    width: 100%;
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &__group {
+        margin-top: 3rem;
+
+        &--horizontal {
+            display: flex;
+            align-items: center;
+        }
+
+        @include abstracts.screen(sm) {
+            &:first-child {
+                margin-top: 3rem;
+            }
+           margin-top: 2rem;
+        }
+    }
+
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown))   {
+        .form__text-input {
+            border-color: $color-error;
+            background: rgba($color: $color-error, $alpha: 0.1);
+        }
+
+        .form__error, .form__input-icon-error {
+            display: block;
+        }
+
+        .form__input-icon {
+            display: none;
+        }
+        
+    }
+
+    &__text-input {
+
+        &:focus-within {
+            border-color: #77dae6   ;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 5rem;
+        padding: 0 1.2rem;
+        border-radius: 1rem;
+        border: 1.5px solid #d2d1d6;
+
+        @include abstracts.screen(md) {
+            height: 4.8rem;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        height: 100%;
+
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 44.444%;
+        &::placeholder {
+            color: #d2d1d6;
+        }
+
+        &-icon {
+            margin-left: 1.2rem;
+        }
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__error {
+        margin-top: 1rem;
+        color: $color-error;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-align: left;
+        display: none;
+    }
+
+    &__input-icon-error {
+        display: none;
+        margin-left: 1.2rem;
+
+        animation: shake 0.5s;
+    }
+
+    &__pull-right {
+        margin-left: auto;
+    }
+
+    &__checkbox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        user-select: none;
+
+        &-label {
+            margin-left: 2.9rem;
+            color: #9e9da8;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 146.667%;
+
+            @include abstracts.screen(md) {
+                font-weight: 400;
+            }
+        }
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+        }
+
+        &::before {
+            width: 1.9rem;
+            height: 1.9rem;
+            border-radius: 0.5rem;
+            border: 0.15rem solid #9E9DA8;
+        }
+    }
+
+    &__checkbox:has(:checked) {
+        &::before {
+            background: #FFB700;
+            border-color: #FFB700;
+        }
+
+        &::after {
+            width: 1.5rem;
+            height: 0.8rem;
+            border: 0.3rem solid;
+            border-color: transparent transparent #fff #fff;
+            rotate: -45deg;
+            left: 0.2rem;
+            top: 0.4rem;
+        }
+    }
+}

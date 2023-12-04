@@ -1,0 +1,174 @@
+@use "../abstracts";
+
+.auth {
+    display: flex;
+    min-height: 100vh;
+
+    @supports (-webkit-touch-callout: none) {
+        min-height: -webkit-fill-available;
+    }
+
+    &__intro,
+    &__content {
+        flex: 1;
+        padding: 0 3rem;
+    }
+
+    &__intro {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+        background: var(--auth-intro-color);
+      
+
+        &-logo,
+        &-next {
+            position: absolute;
+            left: 50%;
+            translate: -50%;
+        }
+
+        &-logo {
+            top: 8rem;
+        }
+
+        &-next {
+            bottom: 5rem;
+        }
+
+        &-img {
+            width: min(42.4rem, 100%);
+        }
+
+        &-text {
+            max-width: 41.2rem;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+            color: var(--auth-intro-text-color);
+
+            @include abstracts.screen(md) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__content {
+        background: var(--auth-content-bg);
+        overflow-y: auto;
+
+        @include abstracts.screen(md) {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            transition: translate 0.4s;
+
+            &.hide {
+                translate: 100%;
+            }
+        }
+    }
+
+    &__inner {
+        padding: 5rem 0;
+        width: min(46rem, 100%);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        @include abstracts.screen(md) {
+            padding: 3.2rem 0;
+        }
+    }
+
+    &__heading {
+        margin-top: 5rem;
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 146.667%;
+        color: var(--auth-content-heading-color);
+
+        @include abstracts.screen(md) {
+            margin-top: 4rem;
+            font-size: 2.2rem;
+        }
+    }
+
+    &__desc {
+        margin-top: 1rem;
+        padding: 0 2rem;
+        color: #9e9da8;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__message {
+        margin-top: 3rem;
+    }
+
+    &__form {
+        margin-top: 3rem;
+
+        @include abstracts.screen(md) {
+            margin-top: 0;
+        }
+    }
+
+    &__forget {
+        margin-top: 0;
+    }
+
+    &__link {
+        color: #0071dc;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__btn-group {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: 5rem;
+        @include abstracts.screen(md) {
+            margin-top: 3rem;
+            gap: 2rem;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+    }
+
+    &__text {
+        margin-top: 10.8rem;
+        color: #9e9da8;
+        font-size: 1.8rem;
+        line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            margin-top: 5rem;
+            font-size: 1.6rem;
+        }
+
+        &-link {
+            font-size: inherit;
+        }
+    }
+}
