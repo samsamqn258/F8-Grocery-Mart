@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
         <title>Grocery Mart</title>
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
@@ -29,619 +30,754 @@
             load("#header", "./templates/header-logined.html");
         </script>
 
-        <!-- Main -->
-        <main class="container home">
-            <!-- Slide Show -->
-            <div class="home__container">
-                <div class="slideshow">
-                    <div class="slideshow__inner">
-                        <div class="slideshow__items">
-                            <a href="#!" class="slideshow__link">
-                                <picture>
-                                    <source
-                                        media="(max-width: 767.98px)"
-                                        srcset="./assets/img/slideshow/item-1-mobile-md.png"
-                                    />
-                                    <img src="./assets/img/slideshow/item-1.png" alt="" class="slideshow__img" />
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="slideshow__page">
-                        <span class="slideshow__num">1</span>
-                        <span class="slideshow__slider"></span>
-                        <span class="slideshow__num">5</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Browse Categories -->
-            <section class="home__container">
-                <div class="home__row">
-                    <h2 class="home__heading">
-                        <a href="#!">Browse Categories</a>
-                    </h2>
-                </div>
-                <div class="home__cate row row-cols-3 row-cols-md-1">
-                    <!-- Item - 1 -->
-                    <div class="col">
-                        <a href="#!">
-                            <article class="cate-items">
-                                <img src="./assets/img/cate-item/cate-item-1.png" alt="" class="cate-items__thumb" />
-                                <div class="cate-items__info">
-                                    <h3 class="cate-items__title">$24 - $150</h3>
-                                    <p class="cate-items__desc">New sumatra mandeling coffee blend</p>
-                                </div>
-                            </article>
-                        </a>
-                    </div>
-
-                    <!-- Item - 2 -->
-                    <div class="col">
-                        <a href="#!">
-                            <article class="cate-items">
-                                <img src="./assets/img/cate-item/cate-item-2.png" alt="" class="cate-items__thumb" />
-                                <div class="cate-items__info">
-                                    <h3 class="cate-items__title">$37 - $160</h3>
-                                    <p class="cate-items__desc">Espresso arabica and robusta beans</p>
-                                </div>
-                            </article>
-                        </a>
-                    </div>
-
-                    <!-- Item - 3 -->
-                    <div class="col">
-                        <a href="#!">
-                            <article class="cate-items">
-                                <img src="./assets/img/cate-item/cate-item-3.png" alt="" class="cate-items__thumb" />
-                                <div class="cate-items__info">
-                                    <h3 class="cate-items__title">$32 - $160</h3>
-                                    <p class="cate-items__desc">Lavazza top class whole bean coffee blend</p>
-                                </div>
-                            </article>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- List Product Categories -->
-            <section class="home__container">
-                <div class="home__row">
-                    <h2 class="home__heading">
-                        <a href="#!">Total LavAzza 1320</a>
-                    </h2>
-                    <div class="filter-wrap">
-                        <button class="filter-btn js-toggle" toggle-target="#filter">
-                            <span class="filter-btn__title">Filter</span>
-                            <img src="./assets/icons/filter-btn.svg" alt="" class="fiter-btn__icons icon" />
+        <main class="product-page">
+            <div class="container">
+                <!-- Search Bar -->
+                <div class="product-container">
+                    <div class="search-bar d-none d-md-flex">
+                        <input type="text" name="" id="" placeholder="Search for item" class="search-bar__input" />
+                        <button class="search-bar__search-icon">
+                            <img src="./assets/icons/search.svg" alt="" class="icon" />
                         </button>
+                    </div>
+                </div>
 
-                        <div id="filter" class="filter hide">
-                            <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow-up" />
-                            <h3 class="filter__heading">Filter</h3>
-                            <form action="" class="filter__form">
-                                <div class="filter__row filter__content">
-                                    <!-- Column - 1 -->
-                                    <div class="filter__col">
-                                        <label for="" class="filter__form-label">Price</label>
-                                        <div class="filter__form-group">
-                                            <div
-                                                class="filter__form-slider"
-                                                style="--min-value: 10%; --max-value: 60%"
-                                            ></div>
-                                        </div>
+                <!-- Breadcrumbs -->
+                <div class="product-container">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="#!" class="breadcrumbs__link">
+                                Departments
+                                <img src="./assets/icons/arrow-right.svg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" class="breadcrumbs__link">
+                                Coffee
+                                <img src="./assets/icons/arrow-right.svg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" class="breadcrumbs__link">
+                                Coffee Beans
+                                <img src="./assets/icons/arrow-right.svg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current"> LavAzza </a>
+                        </li>
+                    </ul>
+                </div>
 
-                                        <div class="filter__form-group filter__form-group--horizontal">
-                                            <div>
-                                                <label for="" class="filter__form-label filter__form-label--small">
-                                                    Minimum
-                                                </label>
-                                                <div class="filter__form-text-input filter__form-text-input--small">
-                                                    <input
-                                                        type="text"
-                                                        value="$30.00"
-                                                        name=""
-                                                        id=""
-                                                        class="filter__form-input"
-                                                    />
-                                                </div>
-                                            </div>
-
-                                            <div>
-                                                <label for="" class="filter__form-label filter__form-label--small">
-                                                    Maximum
-                                                </label>
-                                                <div class="filter__form-text-input filter__form-text-input--small">
-                                                    <input
-                                                        type="text"
-                                                        value="$100.00"
-                                                        name=""
-                                                        id=""
-                                                        class="filter__form-input"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
+                <!-- Products Infor -->
+                <div class="product-container product__info-content">
+                    <div class="row">
+                        <div class="col-5 col-xl-6 col-lg-12">
+                            <div class="prod-preview">
+                                <div class="prod-preview__list">
+                                    <div class="prod-preview__item">
+                                        <img
+                                            src="./assets/img/product/item-product-1.png"
+                                            alt=""
+                                            class="prod-preview__img"
+                                        />
                                     </div>
 
-                                    <div class="filter__separate"></div>
-                                    <!-- Column - 2 -->
-                                    <div class="filter__col">
-                                        <label for="" class="filter__form-label">Size/Weight</label>
-                                        <div class="filter__form-group">
-                                            <div class="filter__form-select-wrap">
-                                                <div class="filter__form-select" style="--select-width: 15.8rem">
-                                                    500g
-                                                    <img
-                                                        src="./assets/icons/select-arrow-down.svg"
-                                                        alt=""
-                                                        class="filter__form-select-arrow icon"
-                                                    />
-                                                </div>
-
-                                                <div class="filter__form-select">
-                                                    Gram
-                                                    <img
-                                                        src="./assets/icons/select-arrow-down.svg"
-                                                        alt=""
-                                                        class="filter__form-select-arrow icon"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="filter__form-group">
-                                            <div class="filter__form-tags">
-                                                <div class="filter__form-tag">Small</div>
-                                                <div class="filter__form-tag">Medium</div>
-                                                <div class="filter__form-tag">Large</div>
-                                            </div>
-                                        </div>
+                                    <div class="prod-preview__item">
+                                        <img
+                                            src="./assets/img/product/item-product-2.png"
+                                            alt=""
+                                            class="prod-preview__img"
+                                        />
                                     </div>
-                                    <div class="filter__separate"></div>
-                                    <!-- Column - 3 -->
-                                    <div class="filter__col">
-                                        <label for="" class="filter__form-label">Brand</label>
-                                        <div class="filter__form-group">
-                                            <div class="filter__form-text-input">
-                                                <input
-                                                    type="text"
-                                                    placeholder="Search brand name"
-                                                    name=""
-                                                    id=""
-                                                    class="filter__form-input"
-                                                />
+
+                                    <div class="prod-preview__item">
+                                        <img
+                                            src="./assets/img/product/item-product-3.png"
+                                            alt=""
+                                            class="prod-preview__img"
+                                        />
+                                    </div>
+
+                                    <div class="prod-preview__item">
+                                        <img
+                                            src="./assets/img/product/item-product-4.png"
+                                            alt=""
+                                            class="prod-preview__img"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="prod-preview__thumbs">
+                                    <img
+                                        src="./assets/img/product/item-product-1.png"
+                                        alt=""
+                                        class="prod-preview__thumb-img prod-preview__thumb-img--current"
+                                    />
+                                    <img
+                                        src="./assets/img/product/item-product-2.png"
+                                        alt=""
+                                        class="prod-preview__thumb-img"
+                                    />
+                                    <img
+                                        src="./assets/img/product/item-product-3.png"
+                                        alt=""
+                                        class="prod-preview__thumb-img"
+                                    />
+                                    <img
+                                        src="./assets/img/product/item-product-4.png"
+                                        alt=""
+                                        class="prod-preview__thumb-img"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 col-xl-6 col-lg-12">
+                            <form action="" class="form">
+                                <section class="prod-info">
+                                    <h1 class="prod-info__heading">
+                                        Coffee Beans - Espresso Arabica and Robusta Beans
+                                    </h1>
+                                    <div class="row">
+                                        <div class="col-5 col-xxl-6 col-xl-12">
+                                            <div class="prod-prop">
+                                                <img src="./assets/icons/star.svg" alt="" class="prod-prop__img" />
+                                                <h4 class="prod-prop__title">(3.5) 1100 reviews</h4>
+                                            </div>
+
+                                            <label for="" class="form__label prod-info__label">Size/Weight</label>
+                                            <div class="filter__form-group">
+                                                <div class="form__select-wrap">
+                                                    <div class="form__select" style="--select-width: 14.6rem">
+                                                        500g
+                                                        <img
+                                                            src="./assets/icons/select-arrow-down.svg"
+                                                            alt=""
+                                                            class="form__select-arrow icon"
+                                                        />
+                                                    </div>
+
+                                                    <div class="form__select">
+                                                        Gram
+                                                        <img
+                                                            src="./assets/icons/select-arrow-down.svg"
+                                                            alt=""
+                                                            class="form__select-arrow icon"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="filter__form-group">
+                                                <div class="form__tags">
+                                                    <div class="form__tag prod-info__tag">Small</div>
+                                                    <div class="form__tag prod-info__tag">Medium</div>
+                                                    <div class="form__tag prod-info__tag">Large</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 offset-1 col-xxl-6 offset-xxl-0 col-xl-12">
+                                            <div class="prod-prop">
                                                 <img
-                                                    src="./assets/icons/search.svg"
+                                                    src="./assets/icons/document.svg"
                                                     alt=""
-                                                    class="filter__form-icons icon"
+                                                    class="prod-prop__img icon"
                                                 />
+                                                <h4 class="prod-prop__title">Compare</h4>
                                             </div>
-                                        </div>
-                                        <div class="filter__form-group">
-                                            <div class="filter__form-tags">
-                                                <div class="filter__form-tag">Lavazza</div>
-                                                <div class="filter__form-tag">Nescafe</div>
-                                                <div class="filter__form-tag">Starbucks</div>
+                                            <div class="prod-prop">
+                                                <img src="./assets/icons/buy.svg" alt="" class="prod-prop__img icon" />
+                                                <div>
+                                                    <h4 class="prod-prop__title">Delivery</h4>
+                                                    <p class="prod-prop__desc">From $6 for 1-3 days</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="prod-prop">
+                                                <img src="./assets/icons/bag.svg" alt="" class="prod-prop__img icon" />
+                                                <div>
+                                                    <h4 class="prod-prop__title">Pickup</h4>
+                                                    <p class="prod-prop__desc">Out of 2 store, today</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="prod-info__card">
+                                                <div class="prod-info__row">
+                                                    <span class="prod-info__price">$500.00</span>
+                                                    <span class="prod-info__tax">10%</span>
+                                                </div>
+
+                                                <span class="prod-info__total-price">$540.00</span>
+
+                                                <div class="prod-info__row">
+                                                    <button class="btn btn--primary prod-info__add-to-cart">
+                                                        Add to cart
+                                                    </button>
+                                                    <a href="#!" class="like__btn prod-info__like-btn">
+                                                        <img
+                                                            class="like__btn-icon icon"
+                                                            src="./assets/icons/heart.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            class="like__btn-icon--liked"
+                                                            src="./assets/icons/heart-liked.svg"
+                                                            alt=""
+                                                        />
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="filter__row filter__footer">
-                                    <button class="btn btn--text filter__cancel js-toggle" toggle-target="#filter">
-                                        Cancel
-                                    </button>
-                                    <button class="btn btn--primary filter__submit js-toggle" toggle-target="#filter">
-                                        Show Result
-                                    </button>
-                                </div>
+                                </section>
                             </form>
                         </div>
                     </div>
                 </div>
 
-                <div class="row row-cols-4 row-cols-lg-2 row-cols-sm-1 g-3">
-                    <!-- Product - 1 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__wrap">
-                                <a href="#!">
-                                    <img
-                                        src="./assets/img/product/item-product-1.png"
-                                        alt=""
-                                        class="product-card__img"
-                                    />
-                                </a>
-                                <a href="#!" class="like__btn product-card__like-btn">
-                                    <img class="like__btn-icon icon" src="./assets/icons/heart.svg" alt="" />
-                                    <img class="like__btn-icon--liked" src="./assets/icons/heart-liked.svg" alt="" />
-                                </a>
-                            </div>
+                <!-- Products Content -->
+                <div class="product-container">
+                    <div class="prod-tab js-tabs">
+                        <ul class="prod-tab__list">
+                            <li class="prod-tab__item prod-tab__item--current">Description</li>
+                            <li class="prod-tab__item">Review (1100)</li>
+                            <li class="prod-tab__item">Similar</li>
+                        </ul>
 
-                            <h3 class="product-card__heading">
-                                <a href="#!">Coffee Beans - Espresso Arabica and Robusta Beans</a>
-                            </h3>
-
-                            <p class="product-card__branch">Lavazza</p>
-
-                            <div class="product-card__row">
-                                <div class="product-card__price">$47.00</div>
-                                <div class="product-card__rate">
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <div class="product-card__score">4.3</div>
+                        <div class="prod-tab__contents">
+                            <div class="prod-tab__content prod-tab__content--current">
+                                <div class="row">
+                                    <div class="col-8 col-xl-10 col-lg-12">
+                                        <div class="text-content prod-tab__text-content">
+                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet <a href="#!">consectetur</a> adipisicing
+                                                elit. Aliquid, cupiditate. Modi, quidem, ullam sint dolorum recusandae
+                                                voluptates dignissimos similique animi assumenda
+                                                <a href="#!">praesentium</a> et! Illum dolorem est rem voluptas nam!
+                                                Voluptatem.
+                                            </p>
+                                            <h3>Lorem ipsum dolor sit amet.</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+                                                cupiditate. Modi, quidem, ullam sint dolorum recusandae voluptates
+                                                dignissimos similique animi assumenda praesentium et! Illum dolorem est
+                                                rem voluptas nam! Voluptatem.
+                                            </p>
+                                            <p>
+                                                <img src="./assets/img/product/item-product-1.png" alt="" />
+                                                <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
+                                            </p>
+                                            <blockquote>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet <em>consectetur</em>
+                                                    <u>adipisicing</u> elit. Aliquid, cupiditate. Modi, quidem, ullam
+                                                    sint dolorum recusandae voluptates dignissimos similique animi
+                                                    assumenda praesentium et! Illum dolorem est rem voluptas nam!
+                                                    Voluptatem.
+                                                </p>
+                                            </blockquote>
+                                            <h3>Lorem ipsum dolor sit amet.</h3>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+                                                cupiditate. Modi, quidem, ullam sint dolorum recusandae voluptates
+                                                dignissimos similique animi assumenda praesentium et! Illum dolorem est
+                                                rem voluptas nam! Voluptatem.
+                                            </p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+                                                cupiditate. Modi, quidem, ullam sint dolorum recusandae voluptates
+                                                dignissimos similique animi assumenda praesentium et! Illum dolorem est
+                                                rem voluptas nam! Voluptatem.
+                                            </p>
+                                            <hr />
+                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+                                                cupiditate. Modi, quidem, ullam sint dolorum recusandae voluptates
+                                                dignissimos similique animi assumenda praesentium et! Illum dolorem est
+                                                rem voluptas nam! Voluptatem.
+                                            </p>
+                                            <p>
+                                                <img src="./assets/img/product/item-product-1.png" alt="" />
+                                                <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
+                                            </p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+                                                cupiditate. Modi, quidem, ullam sint dolorum recusandae voluptates
+                                                dignissimos similique animi assumenda praesentium et! Illum dolorem est
+                                                rem voluptas nam! Voluptatem.
+                                            </p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+                                                cupiditate. Modi, quidem, ullam sint dolorum recusandae voluptates
+                                                dignissimos similique animi assumenda praesentium et! Illum dolorem est
+                                                rem voluptas nam! Voluptatem.
+                                            </p>
+                                            <hr />
+                                            <h2>Lorem ipsum dolor sit amet.</h2>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+                                                cupiditate. Modi, quidem, ullam sint dolorum recusandae voluptates
+                                                dignissimos similique animi assumenda praesentium et! Illum dolorem est
+                                                rem voluptas nam! Voluptatem.
+                                            </p>
+                                            <p>
+                                                <img src="./assets/img/product/item-product-1.png" alt="" />
+                                                <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
+                                            </p>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+                                                cupiditate. Modi, quidem, ullam sint dolorum recusandae voluptates
+                                                dignissimos similique animi assumenda praesentium et! Illum dolorem est
+                                                rem voluptas nam! Voluptatem.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </article>
-                    </div>
-
-                    <!-- Product - 2 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__wrap">
-                                <a href="#!">
-                                    <img
-                                        src="./assets/img/product/item-product-2.png"
-                                        alt=""
-                                        class="product-card__img"
-                                    />
-                                </a>
-                                <a href="#!" class="like__btn product-card__like-btn">
-                                    <img class="like__btn-icon icon" src="./assets/icons/heart.svg" alt="" />
-                                    <img class="like__btn-icon--liked" src="./assets/icons/heart-liked.svg" alt="" />
-                                </a>
-                            </div>
-
-                            <h3 class="product-card__heading">
-                                <a href="#!">Lavazza Coffee Blends - Try the Italian Espresso</a>
-                            </h3>
-
-                            <p class="product-card__branch">Lavazza</p>
-
-                            <div class="product-card__row">
-                                <div class="product-card__price">$53.00</div>
-                                <div class="product-card__rate">
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <div class="product-card__score">3.4</div>
+                            <div class="prod-tab__content">
+                                <div class="prod-content">
+                                    <h2 class="prod-content__heading">What our customers are saying</h2>
+                                    <div class="row row-cols-3 gx-lg-2 row-cols-md-1 gy-md-3">
+                                        <div class="col">
+                                            <!-- Review Card 1 -->
+                                            <div class="review-card">
+                                                <div class="review-card__info">
+                                                    <img
+                                                        src="./assets/img/avatars/avatar-1.png"
+                                                        alt=""
+                                                        class="review-card__avatar"
+                                                    />
+                                                    <div class="review-card__title">
+                                                        <h4 class="review-card__user-name">Jakir Hussen</h4>
+                                                        <p class="review-card__desc">
+                                                            Great product, I love this Coffee Beans
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="review-card__rating">
+                                                    <div class="review-card__star-wrap">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star-half.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star-empty.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                    </div>
+                                                    <span class="review-card__evaluate">(3.5) Review</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Review Card 2 -->
+                                            <div class="review-card">
+                                                <div class="review-card__info">
+                                                    <img
+                                                        src="./assets/img/avatars/avatar-2.png"
+                                                        alt=""
+                                                        class="review-card__avatar"
+                                                    />
+                                                    <div class="review-card__title">
+                                                        <h4 class="review-card__user-name">Jubed Ahmed</h4>
+                                                        <p class="review-card__desc">
+                                                            Awesome Coffee, I love this Coffee Beans
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="review-card__rating">
+                                                    <div class="review-card__star-wrap">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star-half.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star-empty.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                    </div>
+                                                    <span class="review-card__evaluate">(3.5) Review</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Review Card 3 -->
+                                            <div class="review-card">
+                                                <div class="review-card__info">
+                                                    <img
+                                                        src="./assets/img/avatars/avatar-3.png"
+                                                        alt=""
+                                                        class="review-card__avatar"
+                                                    />
+                                                    <div class="review-card__title">
+                                                        <h4 class="review-card__user-name">Delwar Hussain</h4>
+                                                        <p class="review-card__desc">
+                                                            Great product, I like this Coffee Beans
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="review-card__rating">
+                                                    <div class="review-card__star-wrap">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star-half.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                        <img
+                                                            src="./assets/icons/star-empty.svg"
+                                                            alt=""
+                                                            class="review-card__icon"
+                                                        />
+                                                    </div>
+                                                    <span class="review-card__evaluate">(3.5) Review</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </article>
-                    </div>
+                            <div class="prod-tab__content">
+                                <div class="prod-content">
+                                    <h2 class="prod-content__heading">Similar items you might like</h2>
+                                    <div
+                                        class="row row-cols-6 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-2"
+                                    >
+                                        <!-- Product - 2 -->
+                                        <div class="col">
+                                            <article class="product-card">
+                                                <div class="product-card__wrap">
+                                                    <a href="./product-detail.html">
+                                                        <img
+                                                            src="./assets/img/product/item-product-2.png"
+                                                            alt=""
+                                                            class="product-card__img"
+                                                        />
+                                                    </a>
+                                                    <a href="#!" class="like__btn product-card__like-btn">
+                                                        <img
+                                                            class="like__btn-icon icon"
+                                                            src="./assets/icons/heart.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            class="like__btn-icon--liked"
+                                                            src="./assets/icons/heart-liked.svg"
+                                                            alt=""
+                                                        />
+                                                    </a>
+                                                </div>
 
-                    <!-- Product - 3 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__wrap">
-                                <a href="#!">
-                                    <img
-                                        src="./assets/img/product/item-product-3.png"
-                                        alt=""
-                                        class="product-card__img"
-                                    />
-                                </a>
-                                <a href="#!" class="like__btn like__btn--liked product-card__like-btn">
-                                    <img class="like__btn-icon icon" src="./assets/icons/heart.svg" alt="" />
-                                    <img class="like__btn-icon--liked" src="./assets/icons/heart-liked.svg" alt="" />
-                                </a>
-                            </div>
+                                                <h3 class="product-card__heading">
+                                                    <a href="#!">Lavazza Coffee Blends - Try the Italian Espresso</a>
+                                                </h3>
 
-                            <h3 class="product-card__heading">
-                                <a href="#!">Lavazza - Caffè Espresso Black Tin - Ground coffee</a>
-                            </h3>
+                                                <p class="product-card__branch">Lavazza</p>
 
-                            <p class="product-card__branch">Welikecoffee</p>
+                                                <div class="product-card__row">
+                                                    <div class="product-card__price">$53.00</div>
+                                                    <div class="product-card__rate">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="product-card__star"
+                                                        />
+                                                        <div class="product-card__score">3.4</div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
 
-                            <div class="product-card__row">
-                                <div class="product-card__price">$99.99</div>
-                                <div class="product-card__rate">
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <div class="product-card__score">5.0</div>
+                                        <!-- Product - 5 -->
+                                        <div class="col">
+                                            <article class="product-card">
+                                                <div class="product-card__wrap">
+                                                    <a href="./product-detail.html">
+                                                        <img
+                                                            src="./assets/img/product/item-product-5.png"
+                                                            alt=""
+                                                            class="product-card__img"
+                                                        />
+                                                    </a>
+                                                    <a href="#!" class="like__btn product-card__like-btn">
+                                                        <img
+                                                            class="like__btn-icon icon"
+                                                            src="./assets/icons/heart.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            class="like__btn-icon--liked"
+                                                            src="./assets/icons/heart-liked.svg"
+                                                            alt=""
+                                                        />
+                                                    </a>
+                                                </div>
+
+                                                <h3 class="product-card__heading">
+                                                    <a href="#!">Lavazza Caffè Crema Gustoso 1 kg beans</a>
+                                                </h3>
+
+                                                <p class="product-card__branch">Lavazza</p>
+
+                                                <div class="product-card__row">
+                                                    <div class="product-card__price">$48.65</div>
+                                                    <div class="product-card__rate">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="product-card__star"
+                                                        />
+                                                        <div class="product-card-score">4.4</div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+
+                                        <!-- Product - 7 -->
+                                        <div class="col">
+                                            <article class="product-card">
+                                                <div class="product-card__wrap">
+                                                    <a href="./product-detail.html">
+                                                        <img
+                                                            src="./assets/img/product/item-product-7.png"
+                                                            alt=""
+                                                            class="product-card__img"
+                                                        />
+                                                    </a>
+                                                    <a
+                                                        href="#!"
+                                                        class="like__btn like__btn--liked product-card__like-btn"
+                                                    >
+                                                        <img
+                                                            class="like__btn-icon icon"
+                                                            src="./assets/icons/heart.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            class="like__btn-icon--liked"
+                                                            src="./assets/icons/heart-liked.svg"
+                                                            alt=""
+                                                        />
+                                                    </a>
+                                                </div>
+
+                                                <h3 class="product-card__heading">
+                                                    <a href="#!"
+                                                        >Lavazza Espresso Coffee Bean Sampler | Lavazza Sampler</a
+                                                    >
+                                                </h3>
+
+                                                <p class="product-card__branch">Lavazza</p>
+
+                                                <div class="product-card__row">
+                                                    <div class="product-card__price">$58.65</div>
+                                                    <div class="product-card__rate">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="product-card__star"
+                                                        />
+                                                        <div class="product-card-score">4.8</div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+
+                                        <!-- Product - 9 -->
+                                        <div class="col">
+                                            <article class="product-card">
+                                                <div class="product-card__wrap">
+                                                    <a href="./product-detail.html">
+                                                        <img
+                                                            src="./assets/img/product/item-product-9.png"
+                                                            alt=""
+                                                            class="product-card__img"
+                                                        />
+                                                    </a>
+                                                    <a href="#!" class="like__btn product-card__like-btn">
+                                                        <img
+                                                            class="like__btn-icon icon"
+                                                            src="./assets/icons/heart.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            class="like__btn-icon--liked"
+                                                            src="./assets/icons/heart-liked.svg"
+                                                            alt=""
+                                                        />
+                                                    </a>
+                                                </div>
+
+                                                <h3 class="product-card__heading">
+                                                    <a href="#!"
+                                                        >Lavazza Prontissimo Intenso Instant Coffee 95g | Sainsbury's</a
+                                                    >
+                                                </h3>
+
+                                                <p class="product-card__branch">Lavazza</p>
+
+                                                <div class="product-card__row">
+                                                    <div class="product-card__price">$48.65</div>
+                                                    <div class="product-card__rate">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="product-card__star"
+                                                        />
+                                                        <div class="product-card-score">4.4</div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+
+                                        <!-- Product - 11 -->
+                                        <div class="col">
+                                            <article class="product-card">
+                                                <div class="product-card__wrap">
+                                                    <a href="./product-detail.html">
+                                                        <img
+                                                            src="./assets/img/product/item-product-11.png"
+                                                            alt=""
+                                                            class="product-card__img"
+                                                        />
+                                                    </a>
+                                                    <a href="#!" class="like__btn product-card__like-btn">
+                                                        <img
+                                                            class="like__btn-icon icon"
+                                                            src="./assets/icons/heart.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            class="like__btn-icon--liked"
+                                                            src="./assets/icons/heart-liked.svg"
+                                                            alt=""
+                                                        />
+                                                    </a>
+                                                </div>
+
+                                                <h3 class="product-card__heading">
+                                                    <a href="#!">Lavazza Qualita Rossa</a>
+                                                </h3>
+
+                                                <p class="product-card__branch">Lavazza</p>
+
+                                                <div class="product-card__row">
+                                                    <div class="product-card__price">$78.65</div>
+                                                    <div class="product-card__rate">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="product-card__star"
+                                                        />
+                                                        <div class="product-card-score">4.4</div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+
+                                        <!-- Product - 12-->
+                                        <div class="col">
+                                            <article class="product-card">
+                                                <div class="product-card__wrap">
+                                                    <a href="./product-detail.html">
+                                                        <img
+                                                            src="./assets/img/product/item-product-12.png"
+                                                            alt=""
+                                                            class="product-card__img"
+                                                        />
+                                                    </a>
+                                                    <a href="#!" class="like__btn product-card__like-btn">
+                                                        <img
+                                                            class="like__btn-icon icon"
+                                                            src="./assets/icons/heart.svg"
+                                                            alt=""
+                                                        />
+                                                        <img
+                                                            class="like__btn-icon--liked"
+                                                            src="./assets/icons/heart-liked.svg"
+                                                            alt=""
+                                                        />
+                                                    </a>
+                                                </div>
+
+                                                <h3 class="product-card__heading">
+                                                    <a href="#!"
+                                                        >Lavazza Decaf - Decaffeinated Coffee Beans | Lavazza</a
+                                                    >
+                                                </h3>
+
+                                                <p class="product-card__branch">Lavazza</p>
+
+                                                <div class="product-card__row">
+                                                    <div class="product-card__price">$28.65</div>
+                                                    <div class="product-card__rate">
+                                                        <img
+                                                            src="./assets/icons/star.svg"
+                                                            alt=""
+                                                            class="product-card__star"
+                                                        />
+                                                        <div class="product-card-score">4.4</div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </article>
-                    </div>
-
-                    <!-- Product - 4 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__wrap">
-                                <a href="#!">
-                                    <img
-                                        src="./assets/img/product/item-product-4.png"
-                                        alt=""
-                                        class="product-card__img"
-                                    />
-                                </a>
-                                <a href="#!" class="like__btn product-card__like-btn">
-                                    <img class="like__btn-icon icon" src="./assets/icons/heart.svg" alt="" />
-                                    <img class="like__btn-icon--liked" src="./assets/icons/heart-liked.svg" alt="" />
-                                </a>
-                            </div>
-
-                            <h3 class="product-card__heading">
-                                <a href="#!">Qualità Oro Mountain Grown - Espresso Coffee Beans</a>
-                            </h3>
-
-                            <p class="product-card__branch">Lavazza</p>
-
-                            <div class="product-card__row">
-                                <div class="product-card__price">$38.65</div>
-                                <div class="product-card__rate">
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <div class="product-card-score">4.4</div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product - 5 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__wrap">
-                                <a href="#!">
-                                    <img
-                                        src="./assets/img/product/item-product-5.png"
-                                        alt=""
-                                        class="product-card__img"
-                                    />
-                                </a>
-                                <a href="#!" class="like__btn product-card__like-btn">
-                                    <img class="like__btn-icon icon" src="./assets/icons/heart.svg" alt="" />
-                                    <img class="like__btn-icon--liked" src="./assets/icons/heart-liked.svg" alt="" />
-                                </a>
-                            </div>
-
-                            <h3 class="product-card__heading">
-                                <a href="#!">Lavazza Caffè Crema Gustoso 1 kg beans</a>
-                            </h3>
-
-                            <p class="product-card__branch">Lavazza</p>
-
-                            <div class="product-card__row">
-                                <div class="product-card__price">$48.65</div>
-                                <div class="product-card__rate">
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <div class="product-card-score">4.4</div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product - 6 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__wrap">
-                                <a href="#!">
-                                    <img
-                                        src="./assets/img/product/item-product-6.png"
-                                        alt=""
-                                        class="product-card__img"
-                                    />
-                                </a>
-                                <a href="#!" class="like__btn product-card__like-btn">
-                                    <img class="like__btn-icon icon" src="./assets/icons/heart.svg" alt="" />
-                                    <img class="like__btn-icon--liked" src="./assets/icons/heart-liked.svg" alt="" />
-                                </a>
-                            </div>
-
-                            <h3 class="product-card__heading">
-                                <a href="#!"
-                                    >Lavazza Crema e Aroma Coffee Beans | Discount & Wholesale Lavazza Coffee – Piano
-                                    Coffee</a
-                                >
-                            </h3>
-
-                            <p class="product-card__branch">Lavazza</p>
-
-                            <div class="product-card__row">
-                                <div class="product-card__price">$58.65</div>
-                                <div class="product-card__rate">
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <div class="product-card-score">4.4</div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product - 7 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__wrap">
-                                <a href="#!">
-                                    <img
-                                        src="./assets/img/product/item-product-7.png"
-                                        alt=""
-                                        class="product-card__img"
-                                    />
-                                </a>
-                                <a href="#!" class="like__btn product-card__like-btn">
-                                    <img class="like__btn-icon icon" src="./assets/icons/heart.svg" alt="" />
-                                    <img class="like__btn-icon--liked" src="./assets/icons/heart-liked.svg" alt="" />
-                                </a>
-                            </div>
-
-                            <h3 class="product-card__heading">
-                                <a href="#!">Lavazza Espresso Coffee Bean Sampler | Lavazza Sampler</a>
-                            </h3>
-
-                            <p class="product-card__branch">Lavazza</p>
-
-                            <div class="product-card__row">
-                                <div class="product-card__price">$58.65</div>
-                                <div class="product-card__rate">
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <div class="product-card-score">4.8</div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product - 8 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__wrap">
-                                <a href="#!">
-                                    <img
-                                        src="./assets/img/product/item-product-8.png"
-                                        alt=""
-                                        class="product-card__img"
-                                    />
-                                </a>
-                                <a href="#!" class="like__btn product-card__like-btn">
-                                    <img class="like__btn-icon icon" src="./assets/icons/heart.svg" alt="" />
-                                    <img class="like__btn-icon--liked" src="./assets/icons/heart-liked.svg" alt="" />
-                                </a>
-                            </div>
-
-                            <h3 class="product-card__heading">
-                                <a href="#!">Lavazza - Crema e Gusto 250 g ground</a>
-                            </h3>
-
-                            <p class="product-card__branch">Lavazza</p>
-
-                            <div class="product-card__row">
-                                <div class="product-card__price">$38.65</div>
-                                <div class="product-card__rate">
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <div class="product-card-score">4.4</div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product - 9 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__wrap">
-                                <a href="#!">
-                                    <img
-                                        src="./assets/img/product/item-product-9.png"
-                                        alt=""
-                                        class="product-card__img"
-                                    />
-                                </a>
-                                <a href="#!" class="like__btn product-card__like-btn">
-                                    <img class="like__btn-icon icon" src="./assets/icons/heart.svg" alt="" />
-                                    <img class="like__btn-icon--liked" src="./assets/icons/heart-liked.svg" alt="" />
-                                </a>
-                            </div>
-
-                            <h3 class="product-card__heading">
-                                <a href="#!">Lavazza Prontissimo Intenso Instant Coffee 95g | Sainsbury's</a>
-                            </h3>
-
-                            <p class="product-card__branch">Lavazza</p>
-
-                            <div class="product-card__row">
-                                <div class="product-card__price">$48.65</div>
-                                <div class="product-card__rate">
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <div class="product-card-score">4.4</div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product - 10 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__wrap">
-                                <a href="#!">
-                                    <img
-                                        src="./assets/img/product/item-product-10.png"
-                                        alt=""
-                                        class="product-card__img"
-                                    />
-                                </a>
-                                <a href="#!" class="like__btn product-card__like-btn">
-                                    <img class="like__btn-icon icon" src="./assets/icons/heart.svg" alt="" />
-                                    <img class="like__btn-icon--liked" src="./assets/icons/heart-liked.svg" alt="" />
-                                </a>
-                            </div>
-
-                            <h3 class="product-card__heading">
-                                <a href="#!">Lavazza Supercrema Coffee| Coffee | Gourmet Italian Food Store</a>
-                            </h3>
-
-                            <p class="product-card__branch">Lavazza</p>
-
-                            <div class="product-card__row">
-                                <div class="product-card__price">$68.65</div>
-                                <div class="product-card__rate">
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <div class="product-card-score">4.4</div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product - 11 -->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__wrap">
-                                <a href="#!">
-                                    <img
-                                        src="./assets/img/product/item-product-11.png"
-                                        alt=""
-                                        class="product-card__img"
-                                    />
-                                </a>
-                                <a href="#!" class="like__btn product-card__like-btn">
-                                    <img class="like__btn-icon icon" src="./assets/icons/heart.svg" alt="" />
-                                    <img class="like__btn-icon--liked" src="./assets/icons/heart-liked.svg" alt="" />
-                                </a>
-                            </div>
-
-                            <h3 class="product-card__heading">
-                                <a href="#!">Lavazza Qualita Rossa</a>
-                            </h3>
-
-                            <p class="product-card__branch">Lavazza</p>
-
-                            <div class="product-card__row">
-                                <div class="product-card__price">$78.65</div>
-                                <div class="product-card__rate">
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <div class="product-card-score">4.4</div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <!-- Product - 12-->
-                    <div class="col">
-                        <article class="product-card">
-                            <div class="product-card__wrap">
-                                <a href="#!">
-                                    <img
-                                        src="./assets/img/product/item-product-12.png"
-                                        alt=""
-                                        class="product-card__img"
-                                    />
-                                </a>
-                                <a href="#!" class="like__btn product-card__like-btn">
-                                    <img class="like__btn-icon icon" src="./assets/icons/heart.svg" alt="" />
-                                    <img class="like__btn-icon--liked" src="./assets/icons/heart-liked.svg" alt="" />
-                                </a>
-                            </div>
-
-                            <h3 class="product-card__heading">
-                                <a href="#!">Lavazza Decaf - Decaffeinated Coffee Beans | Lavazza</a>
-                            </h3>
-
-                            <p class="product-card__branch">Lavazza</p>
-
-                            <div class="product-card__row">
-                                <div class="product-card__price">$28.65</div>
-                                <div class="product-card__rate">
-                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
-                                    <div class="product-card-score">4.4</div>
-                                </div>
-                            </div>
-                        </article>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </main>
 
         <!-- Footer -->

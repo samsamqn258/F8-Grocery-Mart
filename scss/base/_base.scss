@@ -52,3 +52,11 @@ button {
 .icon {
     filter: var(--icon-color);
 }
+
+i,em {
+    font-style: italic;
+}
+
+b,strong {
+    font-weight: 600;
+}

@@ -1,0 +1,83 @@
+@use '../abstracts';
+
+
+.review-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 1.6rem;
+    background: var(--review-card-bg);
+
+    &__info {
+        display: flex;
+        gap: 2rem;
+
+        @include abstracts.screen(xl) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        @include abstracts.screen(lg) {
+            margin-bottom: 2rem;
+        }
+
+        @include abstracts.screen(md) {
+            flex-direction: row;
+            align-items: initial;
+            text-align: initial;
+        }
+    }
+
+    &__avatar {
+        width: 8rem;
+        height: 8rem;
+        object-fit: cover;
+    }
+
+    &__user-name {
+        font-size: 2.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 145.455%;
+    }
+
+    &__desc {
+        margin-top: 1rem;
+        font-size: 1.6rem;
+        line-height: 150%;
+    }
+
+    &__rating {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        @include abstracts.screen(xl) {
+            flex-direction: column;
+        }
+
+        @include abstracts.screen(lg) {
+            margin-top: auto;
+        }
+
+        @include abstracts.screen(md) {
+            flex-direction: row;
+        }
+    }
+
+    &__star-wrap {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    &__evaluate {
+        margin-left: 1.2rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+}

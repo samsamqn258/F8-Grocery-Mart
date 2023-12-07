@@ -45,20 +45,6 @@
     &__form {
         margin-top: 3rem;
 
-        &-label {
-            display: block;
-            font-size: 2.2rem;
-            font-weight: 500;
-            line-height: 145.455%;
-
-            &--small {
-                font-size: 1.4rem;
-                font-weight: 500;
-                line-height: 142.857%;
-                margin-bottom: 1rem;
-            }
-        }
-
         &-group {
             margin-top: 2rem;
             &--horizontal {
@@ -96,16 +82,9 @@
             }
         }
 
-        &-select-wrap,
         &-text-input {
             border-radius: 0.6rem;
             border: 1px solid #d2d1d6;
-        }
-
-        &-select-wrap {
-            height: 4.5rem;
-            display: flex;
-            align-items: center;
         }
 
         &-text-input {
@@ -146,57 +125,8 @@
             &::placeholder {
                 font-weight: 400;
             }
-
-
         }
 
-        &-select {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            min-width: var(--select-width, 10.8rem);
-            height: calc(100% - 1rem);
-            padding: 0 1.4rem;
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 142.857%;
-
-            @include abstracts.screen(xl) {
-                flex: 1;
-            }
-        }
-
-        &-select + &-select {
-            border-left: 1px solid #d2d1d6;
-        }
-
-        &-tags {
-            display: flex;
-            align-items: center;
-            gap: 1rem 2rem;
-            flex-wrap: wrap;
-
-            @include abstracts.screen(sm) {
-                gap: 1rem;
-                flex-wrap: nowrap;
-            }
-        }
-
-        &-tag {
-            color: #9e9da8;
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 142.857%;
-            padding: 0.6rem 1.2rem;
-            background: var(--filter-tags-bg-color);
-            border-radius: 0.6rem;
-            transition: color 0.2s;
-
-            &:hover {
-                color: var(--text-color-primary);
-                cursor: pointer;
-            }
-        }
 
         // End Form
     }
@@ -222,9 +152,9 @@
         justify-content: flex-end;
 
         @include abstracts.screen(sm) {
-           position: sticky;
-           bottom: 3rem;
-           background: var(--filter-bg-color);
+            position: sticky;
+            bottom: 3rem;
+            background: var(--filter-bg-color);
         }
     }
 
@@ -251,7 +181,9 @@
         line-height: 142.857%;
     }
 
-    &__heading, &__content, &__footer {
+    &__heading,
+    &__content,
+    &__footer {
         padding: 0 3rem;
     }
 
@@ -262,10 +194,9 @@
         @include abstracts.screen(xl) {
             flex-direction: column;
         }
-        
+
         @include abstracts.screen(sm) {
             max-height: calc(100vh - 21rem);
         }
-
     }
 }
