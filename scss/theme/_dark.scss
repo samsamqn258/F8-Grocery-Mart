@@ -7,12 +7,22 @@ html.dark {
 
     --body-bg-color: #292E39;
     --header-bg-color: #171C28;
-    @include abstracts.screen(lg) {
-        --header-shadow-color: rgba(0, 0, 0, 0.20);
-    }
+
     --top-act-group-bg-color: #292E39;
     --top-act-group-shadow: rgba(0, 0, 0, 0.20);
     --top-act-group-separate: #ededf6;
+    @include abstracts.screen(lg) {
+        --header-shadow-color: rgba(0, 0, 0, 0.20);
+    }
+
+     // Header
+     --header-act-dropdown-inner-bg:#3f4553;
+     --header-act-dropdown-inner-shadow:rgba(23, 28, 40, 0.40);
+     --header-act-dropdown-inner-border-color: #171C28;
+     --header-act-dropdown-inner-text-color:  #B9BABE;
+   
+
+    
 
     // Dropdown
     --dropdown-bg-color: #3f4553;
