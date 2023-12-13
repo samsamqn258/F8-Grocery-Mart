@@ -11,16 +11,15 @@ html {
     --top-act-group-bg-color: #fff;
     --top-act-group-shadow: rgba(237, 237, 246, 0.2);
     --top-act-group-separate: #ededf6;
-   
+
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
-     // Header
-    --header-act-dropdown-inner-bg:#FFF;
-    --header-act-dropdown-inner-shadow:rgba(200, 200, 200, 0.40);
+    // Header
+    --header-act-dropdown-inner-bg: #fff;
+    --header-act-dropdown-inner-shadow: rgba(200, 200, 200, 0.4);
     --header-act-dropdown-inner-border-color: #ebebeb;
-    
 
     // Dropdown
     --dropdown-bg-color: #fff;
@@ -55,7 +54,12 @@ html {
     // Filter Form
     --filter-bg-color: #fff;
     --filter-shadow-color: rgba(200, 200, 200, 0.4);
+
+    // Form
     --form-tags-bg-color: #f8f8fb;
+    --form-select-dialog-shadow: rgba($color: #000000, $alpha: 0.15);
+    --form-select-dialog-bg: #fff;
+    --form-option-hover-bg: #ebebeb
 
     // Auth
     --auth-content-bg: #fff;
@@ -69,7 +73,7 @@ html {
     --product-page-bg-color: #fff;
 
     @include abstracts.screen(lg) {
-        --product-page-bg-color: #FAFAFD;
+        --product-page-bg-color: #fafafd;
     }
 
     // Breadcrumbs
@@ -87,15 +91,31 @@ html {
     }
     --product-info-bg-color: #f6f6f6;
     --product-info-tag-bg: #ededf6;
-   
 
     // Search-bar
-    --search-bar-bg:#fff;
+    --search-bar-bg: #fff;
 
-    // Review Card 
-    --review-card-bg:#FAFAFD;
+    // Review Card
+    --review-card-bg: #fafafd;
     @include abstracts.screen(lg) {
-        --review-card-bg:#fff;
+        --review-card-bg: #fff;
     }
 
+    // Checkout Page
+    // --checkout-page-bg-color:#f6f6f6;
+    @include abstracts.screen(lg) {
+        --checkout-page-bg-color: #fafafd;
+    }
+
+    --checkout-breadcrumb-bg-color: #fff;
+    --checkout-breadcrumb-shadow-color: rgba(237, 237, 246, 0.2);
+    --checkout-cart-info-bg: #fff;
+    --checkout-cart-info-shadow: rgba(237, 237, 246, 0.2);
+    --checkout-gift-item-bg: rgb(118, 68, 225, 0.1);
+    --checkout-gift-item-shadow: rgba(237, 237, 246, 0.2);
+    --checkout-cart-item-border-color: #d2d1d6;
+
+    // Dialog / Modal
+    --dialog-bg:#fff;
+    --dialog-shadow: rgba(237, 237, 246, 0.2);
 }

@@ -59,7 +59,13 @@ html.dark {
        // Filter Form 
     --filter-bg-color: var(--dropdown-bg-color);
     --filter-shadow-color: var(--dropdown-shadow-color);
+
+    //Form
     --form-tags-bg-color: #171C28;
+    --form-select-dialog-shadow: rgba($color: #fff, $alpha: 0.15);
+    --form-select-dialog-bg: #2f3441;
+    --form-option-hover-bg:     #292e39;
+
 
      // Auth
      --auth-content-bg:#292E39;
@@ -85,7 +91,22 @@ html.dark {
     // Search-bar
     --search-bar-bg:#171C28;
 
-       // Review Card 
-       --review-card-bg:#171C28;
+    // Review Card 
+    --review-card-bg:#171C28;
+
+    // Checkout Page
+
+    --checkout-breadcrumb-bg-color: #171C28;
+    --checkout-breadcrumb-shadow-color: rgba(23, 28, 40, 0.20);
+    --checkout-page-bg-color:#292E39;
+    --checkout-cart-info-bg: #171C28;
+    --checkout-cart-info-shadow: rgba(23, 28, 40, 0.20);
+    --checkout-gift-item-bg: #292E39;
+    --checkout-gift-item-shadow: rgba(23, 28, 40, 0.20);
+    --checkout-cart-item-border-color: #292E39;
+
+    // Dialog / Modal
+    --dialog-bg:#3f4553;
+    --dialog-shadow: rgba(23, 28, 40, 0.40);
 
 }

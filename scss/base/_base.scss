@@ -35,8 +35,18 @@ a, img, select, textarea, input, button {
     border: none;
 }
 
-input {
+input, textarea {
     background: transparent;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    transition: background-color 1s 99999s;
+    -webkit-text-fill-color: var(--text-color);
+    caret-color: var(--text-color);
 }
 
 button {
