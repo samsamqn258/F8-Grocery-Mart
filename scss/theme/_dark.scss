@@ -93,9 +93,7 @@ html.dark {
 
     // Review Card 
     --review-card-bg:#171C28;
-
     // Checkout Page
-
     --checkout-breadcrumb-bg-color: #171C28;
     --checkout-breadcrumb-shadow-color: rgba(23, 28, 40, 0.20);
     --checkout-page-bg-color:#292E39;
@@ -105,8 +103,18 @@ html.dark {
     --checkout-gift-item-shadow: rgba(23, 28, 40, 0.20);
     --checkout-cart-item-border-color: #292E39;
 
+    // Payment Card
+    --payment-item-bg:#292E39;
     // Dialog / Modal
     --dialog-bg:#3f4553;
     --dialog-shadow: rgba(23, 28, 40, 0.40);
+    // Profile
+    --profile-bg:#292E39;
+    --profile-sidebar-bg: #171C28;
+    --profile-sidebar-shadow: rgba(23, 28, 40, 0.20);
+    --profile-sidebar-link-hover: #292E39;
 
+    // Account
+    --account-bg: #292E39;
+    --account-icon-bg: #171C28;
 }

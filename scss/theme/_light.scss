@@ -106,7 +106,6 @@ html {
     @include abstracts.screen(lg) {
         --checkout-page-bg-color: #fafafd;
     }
-
     --checkout-breadcrumb-bg-color: #fff;
     --checkout-breadcrumb-shadow-color: rgba(237, 237, 246, 0.2);
     --checkout-cart-info-bg: #fff;
@@ -114,8 +113,24 @@ html {
     --checkout-gift-item-bg: rgb(118, 68, 225, 0.1);
     --checkout-gift-item-shadow: rgba(237, 237, 246, 0.2);
     --checkout-cart-item-border-color: #d2d1d6;
-
+     // Payment Card
+     --payment-item-bg:#f6f6f6;
+     @include abstracts.screen(lg) {
+         --payment-item-bg: #fafafd;
+     }
     // Dialog / Modal
     --dialog-bg:#fff;
     --dialog-shadow: rgba(237, 237, 246, 0.2);
+
+    // Profile
+    @include abstracts.screen(lg) {
+        --profile-bg:#fafafd;
+    }
+    --profile-sidebar-bg: #fff;
+    --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
+    --profile-sidebar-link-hover: #ebebeb;
+
+      // Account
+      --account-bg: #f6f6f6;
+      --account-icon-bg: #fff;
 }

@@ -16,7 +16,7 @@
 .top-bar {
     position: relative;
     @extend %flexItemsCenter;
-    padding: 3rem 0;
+    padding: 2rem 0;
     z-index: 10;
 
     @include abstracts.screen(lg) {
@@ -208,7 +208,6 @@
 
     &__btn-wrap {
         position: relative;
-       
 
         &:hover .act-dropdown {
             visibility: visible;
@@ -232,6 +231,24 @@
         width: 0.1rem;
         height: 3rem;
         background: var(--top-act-group-separate);
+    }
+
+    &__user {
+        position: relative;
+
+        &:hover .act-dropdown {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__dropdown {
+        right: -15px !important;
+        width: min(300px, 100vw) !important;
+    }
+
+    &__dropdown-arrow {
+        right: 15px !important;
     }
 
     &__avatar {
@@ -393,5 +410,45 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+    }
+}
+
+.user-menu {
+    width: min(300px, 100vw) !important;
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__avatar {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    &__name {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    &__list {
+        margin-top: 30px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+        font-size: 1.6rem;
+    }
+
+    &__separate {
+        margin-top: 10px;
+        padding-top: 20px;
+        border-top: 1px solid #d2d1d6;
     }
 }
