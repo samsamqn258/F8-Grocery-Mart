@@ -22,8 +22,6 @@ html.dark {
      --header-act-dropdown-inner-text-color:  #B9BABE;
    
 
-    
-
     // Dropdown
     --dropdown-bg-color: #3f4553;
     --dropdown-shadow-color:rgba(23, 28, 40, 0.40);
@@ -64,7 +62,7 @@ html.dark {
     --form-tags-bg-color: #171C28;
     --form-select-dialog-shadow: rgba($color: #fff, $alpha: 0.15);
     --form-select-dialog-bg: #2f3441;
-    --form-option-hover-bg:     #292e39;
+    --form-option-hover-bg: #292e39;
 
 
      // Auth
@@ -79,7 +77,6 @@ html.dark {
     // Breadcrumbs
     --breadcrumbs-bg-color: #171C28;
     --breadcrumbs-shadow-color: rgba(23, 28, 40, 0.20);
-
 
     // Product Info
     @include abstracts.screen(lg) {

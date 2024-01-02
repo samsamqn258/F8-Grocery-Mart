@@ -8,6 +8,12 @@
         min-height: -webkit-fill-available;
     }
 
+    @include abstracts.screen(md) {
+        &:has(.auth__content.show) &__intro {
+            display: none;
+        }
+    }
+
     &__intro,
     &__content {
         flex: 1;
@@ -59,7 +65,6 @@
 
     &__content {
         background: var(--auth-content-bg);
-        overflow-y: auto;
 
         @include abstracts.screen(md) {
             position: fixed;
